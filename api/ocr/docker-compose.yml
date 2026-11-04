@@ -1,0 +1,14 @@
+services:
+  ocr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nas_ocr
+    restart: unless-stopped
+    environment:
+      OCR_DATA_ROOT: /data
+      OCR_PORT: 7070
+    ports:
+      - "7070:7070"
+    volumes:
+      - ../data:/data

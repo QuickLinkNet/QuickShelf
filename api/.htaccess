@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Never serve config, code, caches or dotfiles directly (.env, index.sqlite, ...)
+RewriteRule ^(?:.*/)?\. - [F,L]
+RewriteRule ^(?:data|config|controllers|core|services|utils|ocr)(?:/|$) - [F,L]
+RewriteRule \.(?:sqlite|sqlite-journal|log|current|example|md|py|yml)$ - [F,L]
+
+# Ensure /api routes go through index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+# Basic hardening
+Options -Indexes
