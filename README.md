@@ -11,6 +11,16 @@ activity calendar, a watch list with tags/notes and an optional inbox-sorting as
 > **Safe by default:** password login, and the archive stays **read-only** until you switch writing on.
 > Personal data (favourites, tags, notes) lives in its own SQLite file **next to** the archive – never inside it.
 
+## Screenshots
+
+<p>
+  <img src="docs/screenshots/overview.png" width="49%" alt="Overview">
+  <img src="docs/screenshots/files.png" width="49%" alt="Files">
+  <img src="docs/screenshots/gallery.png" width="49%" alt="Gallery">
+  <img src="docs/screenshots/cleanup.png" width="49%" alt="Clean up">
+  <img src="docs/screenshots/sort.png" width="49%" alt="Sort inbox">
+</p>
+
 ## Get started in 5 minutes
 
 1. **Get the release:** download `quickshelf-<version>.zip` from the Releases page (or build it yourself: `npm install && npm run release`, result in `release/archiv/`).

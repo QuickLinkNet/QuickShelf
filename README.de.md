@@ -11,6 +11,16 @@ Aktivitätskalender, Merkliste mit Tags/Notizen und optional einen Einsortier-As
 > **Sicher by default:** Login mit Passwort, das Archiv bleibt **nur lesend**, solange du nichts anderes einschaltest.
 > Persönliche Daten (Favoriten, Tags, Notizen) liegen in einer eigenen SQLite-Datei **neben** dem Archiv – nie darin.
 
+## Screenshots
+
+<p>
+  <img src="docs/screenshots/overview.png" width="49%" alt="Overview">
+  <img src="docs/screenshots/files.png" width="49%" alt="Files">
+  <img src="docs/screenshots/gallery.png" width="49%" alt="Gallery">
+  <img src="docs/screenshots/cleanup.png" width="49%" alt="Clean up">
+  <img src="docs/screenshots/sort.png" width="49%" alt="Sort inbox">
+</p>
+
 ## In 5 Minuten loslegen
 
 1. **Release holen:** `quickshelf-<version>.zip` von der Releases-Seite laden (oder selbst bauen: `npm install && npm run release`, Ergebnis in `release/archiv/`).

@@ -111,6 +111,12 @@ shutil.copy2(dup, root / '01_Documents' / 'Invoices' / 'Invoice_Headphones (1).p
 pdf('01_Documents/Scans/Scan0042.pdf', 'Scan', ['Doctor appointment confirmation'], 90)
 pdf('01_Documents/Scans/Scan0043.pdf', 'Scan', ['Parking permit'], 88)
 pdf('01_Documents/Scans/document (2).pdf', 'Document', ['Warranty card washing machine'], 500)
+blob = rnd.randbytes(180_000)  # same name + size in two folders: shows up as a duplicate (the finder ignores files under 50 KB)
+for rel in ('06_Software_Installers/Setup_Tool.zip', '05_Tech/Backup/Setup_Tool.zip'):
+    q = root / rel
+    q.parent.mkdir(parents=True, exist_ok=True)
+    q.write_bytes(blob)
+    stamp(q, 400)
 for d in ('06_Software_Installers/Old', '01_Documents/Archive_2015/Empty'):
     (root / d).mkdir(parents=True, exist_ok=True)
 
